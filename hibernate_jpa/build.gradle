@@ -1,0 +1,27 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+
+    }
+}
+
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+idea{
+
+}
+
+dependencies {
+    compile 'org.hibernate:hibernate-core:4.3.7.Final'
+    compile 'org.hibernate:hibernate-entitymanager:4.3.7.Final'
+    compile 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final'
+    compile 'org.javassist:javassist:3.18.1-GA'
+    compile 'junit:junit:4.11'
+    compile 'mysql:mysql-connector-java:5.1.26'
+}

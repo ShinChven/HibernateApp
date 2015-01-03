@@ -1,0 +1,1 @@
+some hibernate usage example

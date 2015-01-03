@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+
+    <!--config persistance unit-->
+    <persistence-unit name="hibernate_standalone" transaction-type="RESOURCE_LOCAL">
+        <!--assign provider for hibernate usage-->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <!--mapping entity-->
+        <class>com.ShinChven.hibernatestandalone.entity.DataEntity</class>
+        <properties>
+            <!--datasource configuration-->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/hinberate_standalone" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="1234" />
+            <!--hibernate configuration-->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+        </properties>
+
+    </persistence-unit>
+</persistence>
